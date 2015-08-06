@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>H5页面唤醒app | oops的部落格</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="这是我使用hexo的第一篇博客，用于记录每天解决的问题，学习到的新知识。厚积薄发。nowgoant参考博客地址
+ios使用scheme协议  在iOS里，程序之间都是相互隔离，目前并没有一个有效的方式来做程序间通信，幸好 iOS 程序可以很方便的注册自己的 URL Scheme，这样就可以通过打开特定 URL 的方式来传递参数给另外一个程序。原生的APP和网页通过这种协议可以互相通信，safari">
+<meta property="og:type" content="article">
+<meta property="og:title" content="H5页面唤醒app">
+<meta property="og:url" content="http://yoursite.com/2015/08/04/firstPost/index.html">
+<meta property="og:site_name" content="oops的部落格">
+<meta property="og:description" content="这是我使用hexo的第一篇博客，用于记录每天解决的问题，学习到的新知识。厚积薄发。nowgoant参考博客地址
+ios使用scheme协议  在iOS里，程序之间都是相互隔离，目前并没有一个有效的方式来做程序间通信，幸好 iOS 程序可以很方便的注册自己的 URL Scheme，这样就可以通过打开特定 URL 的方式来传递参数给另外一个程序。原生的APP和网页通过这种协议可以互相通信，safari">
+<meta property="og:updated_time" content="2015-08-04T10:02:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="H5页面唤醒app">
+<meta name="twitter:description" content="这是我使用hexo的第一篇博客，用于记录每天解决的问题，学习到的新知识。厚积薄发。nowgoant参考博客地址
+ios使用scheme协议  在iOS里，程序之间都是相互隔离，目前并没有一个有效的方式来做程序间通信，幸好 iOS 程序可以很方便的注册自己的 URL Scheme，这样就可以通过打开特定 URL 的方式来传递参数给另外一个程序。原生的APP和网页通过这种协议可以互相通信，safari">
+  
+    <link rel="alternative" href="/atom.xml" title="oops的部落格" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">oops的部落格</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-firstPost" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/08/04/firstPost/" class="article-date">
+  <time datetime="2015-08-04T10:02:16.000Z" itemprop="datePublished">2015-08-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/hybrid/">hybrid</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      H5页面唤醒app
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>这是我使用hexo的第一篇博客，用于记录每天解决的问题，学习到的新知识。厚积薄发。nowgoant<br><a href="http://echizen.github.io/tech/2015/02-23-map-api-for-web-page/" target="_blank" rel="external">参考博客地址</a></p>
+<h4 id="ios使用scheme协议">ios使用scheme协议</h4><p>  在iOS里，程序之间都是相互隔离，目前并没有一个有效的方式来做程序间通信，幸好 iOS 程序可以很方便的注册自己的 URL Scheme，这样就可以通过打开特定 URL 的方式来传递参数给另外一个程序。原生的APP和网页通过这种协议可以互相通信，safari或者APP的webView都可以识别该协议（一些浏览器如微信内置浏览器和QQ浏览器不支持，据后台技术哥哥介绍这是腾讯有意屏蔽，默认的webview控件是支持的）.<br>   如果是自己的APP想被网页调用，需要自己在app中注册scheme</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">window</span>.location = <span class="string">"itms-apps://itunes.apple.com/app/[name]/[id]?mt=8"</span>;</span><br><span class="line">&#125;, <span class="number">25</span>);</span><br><span class="line"><span class="built_in">window</span>.location = <span class="string">"[scheme]://[host]?url="</span> + openUrl;</span><br></pre></td></tr></table></figure>
+<h4 id="android使用intent协议">android使用intent协议</h4><p>  在一个Android应用中，主要是由四种组件组成的，这四种组件可参考“Android应用的构成”。而这四种组件是独立的，它们之间可以互相调用，协调工作，最终组成一个真正的Android应用。在这些组件之间的通讯中，主要是由Intent协助完成的。Intent负责对应用中一次操作的动作、动作涉及数据、附加数据进行描述，Android则根据此Intent的描述，负责找到对应的组件，将Intent传递给调用的组件，并完成组件的调用。因此，Intent在这里起着一个媒体中介的作用，专门提供组件互相调用的相关信息，实现调用者与被调用者之间的解耦。”所以说intent是协议是不准确的，intent实际上是一种在不同组件之间传递的请求信息。<br><figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.location = <span class="string">"intent://[host]/"</span> + <span class="string">"url="</span> + openUrl + <span class="string">"<span class="subst">#Intent</span>;scheme=[scheme];package=[package_name];end"</span>;</span><br></pre></td></tr></table></figure></p>
+<h4 id="整体代码">整体代码</h4><p>代码功能: 判断手机/平板是否安装app 如果安装 则调用app的scheme，传入url当作参数，来做后续操作 如果没有安装 则跳转到app store/google play 下载app</p>
+<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="list">(<span class="keyword">function</span> <span class="list">()</span> <span class="collection">&#123;</span><br><span class="line">    var openUrl = window.location.search;</span><br><span class="line">    try <span class="collection">&#123;</span><br><span class="line">        openUrl = openUrl.substring<span class="list">(<span class="number">1</span>, openUrl.length)</span><span class="comment">;</span></span><br><span class="line">    &#125;</span> catch <span class="list">(<span class="keyword">e</span>)</span> <span class="collection">&#123;&#125;</span></span><br><span class="line">    var isiOS = navigator.userAgent.match<span class="list">(<span class="keyword">'iPad'</span>)</span> || navigator.userAgent.match<span class="list">(<span class="keyword">'iPhone'</span>)</span> || navigator.userAgent.match<span class="list">(</span><br><span class="line">        'iPod')</span>,</span><br><span class="line">        isAndroid = navigator.userAgent</span><br><span class="line">            .match<span class="list">(<span class="keyword">'Android'</span>)</span>,</span><br><span class="line">        isDesktop = !isiOS &amp;&amp; !isAndroid;</span><br><span class="line">    if <span class="list">(<span class="keyword">isiOS</span>)</span> <span class="collection">&#123;</span><br><span class="line">        setTimeout<span class="list">(<span class="keyword">function</span> <span class="list">()</span> <span class="collection">&#123;</span><br><span class="line">            window.location = <span class="string">"itms-apps://itunes.apple.com/app/[name]/[id]?mt=8"</span><span class="comment">;</span></span><br><span class="line">        &#125;</span>, <span class="number">25</span>)</span><span class="comment">;</span></span><br><span class="line">        window.location = <span class="string">"[scheme]://[host]?url="</span> + openUrl;</span><br><span class="line">    &#125;</span> else if <span class="list">(<span class="keyword">isAndroid</span>)</span> <span class="collection">&#123;</span><br><span class="line">        window.location = <span class="string">"intent://[host]/"</span> + <span class="string">"url="</span> + openUrl + <span class="string">"#Intent;scheme=[scheme];package=[package_name];end"</span><span class="comment">;</span></span><br><span class="line">    &#125;</span> else <span class="collection">&#123;</span><br><span class="line">        window.location.href = openUrl;</span><br><span class="line">    &#125;</span></span><br><span class="line">&#125;</span>)</span><span class="list">()</span><span class="comment">;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/08/04/firstPost/" data-id="cid07ztnc0000faqbq4aipylb" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hybrid/">hybrid</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/03/10/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">我的第一篇文章</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/hybrid/">hybrid</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hybrid/">hybrid</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/hybrid/" style="font-size: 10px;">hybrid</a> <a href="/tags/前端/" style="font-size: 10px;">前端</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">March 2015</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/08/04/firstPost/">H5页面唤醒app</a>
+          </li>
+        
+          <li>
+            <a href="/2015/03/10/hello-world/">我的第一篇文章</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 oops<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
